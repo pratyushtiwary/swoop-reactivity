@@ -17,7 +17,7 @@ temp.value = 1;
 
 ## Working
 
-ref returns an object of `Dep`, where `value` prop has a custom getter and setter, reactive on the other hand uses (Proxy)[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy] to understand which effects should be notified. Interally a queue is maintained and all the fired events are triggered after 10ms of the last fire event call, this way we batch event triggering making it more efficient.
+ref returns an object of `Dep`, where `value` prop has a custom getter and setter, reactive on the other hand uses [Proxy](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy) to understand which effects should be notified. Interally a queue is maintained and all the fired events are triggered after 10ms of the last fire event call, this way we batch event triggering making it more efficient.
 
 **Note: Passing same function in watchEffect only calls it once, this works with anonymous functions as well, there function body is used for unique identification**
 
