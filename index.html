@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swoop</title>
+  </head>
+  <body>
+    <p>Open Console -></p>
+    <script src="./reactivity.js"></script>
+    <script>
+      const state = reactive({
+        a: 1,
+      });
+
+      watchEffect(() => {
+        console.log(state.a);
+      });
+
+      state.a = 2;
+    </script>
+  </body>
+</html>
